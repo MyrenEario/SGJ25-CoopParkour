@@ -1,0 +1,14 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2( 10, 10 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 38.2
+margin_top = 9.1
+margin_right = 78.2
+margin_bottom = 49.1
+text = "Hello World"
+__meta__ = {
+"_edit_use_anchors_": false
+}
