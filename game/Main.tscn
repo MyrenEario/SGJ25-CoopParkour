@@ -6,9 +6,10 @@ scale = Vector2( 10, 10 )
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_left = 10.0
 margin_top = 9.0
-margin_right = 78.0
-margin_bottom = 50.0
-text = "Hello World!!!!!!!"
+margin_right = 95.0
+margin_bottom = 51.0
+text = "Hello World!!!!!!!
+TEst"
 __meta__ = {
 "_edit_use_anchors_": false
 }
