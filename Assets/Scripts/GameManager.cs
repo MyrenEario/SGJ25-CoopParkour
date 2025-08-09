@@ -34,6 +34,10 @@ public class GameManager : MonoBehaviour
         {
             loadNextScene();
         }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            loadPreviouseScene();
+        }
     }
 
     public void ResetScene()
@@ -51,7 +55,8 @@ public class GameManager : MonoBehaviour
 
     public void tryFinish()
     {
-        if (finishedPlayers == 2)
+        Debug.Log("finished Players: " + finishedPlayers + ", try Finish()");
+        if (finishedPlayers >= 2)
         {
             goal1.GetComponent<GoalScript>().finish();
             goal2.GetComponent<GoalScript>().finish();
@@ -61,7 +66,8 @@ public class GameManager : MonoBehaviour
     }
     public void tryNextScene()
     {
-        if (finishedPlayers == 0)
+        Debug.Log("finished Players: "+finishedPlayers);
+        if (finishedPlayers <= 0)
         {
             loadNextScene();
         }

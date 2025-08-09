@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WizardLevel1.unity
     guid: b0aa70f479dce1a479543f47751977ba
+  - enabled: 1
+    path: Assets/Scenes/HappyEnding.unity
+    guid: bff93ded46746d74884840014dd91988
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -45,7 +45,7 @@ public class GoalScript : MonoBehaviour
             && collision.gameObject.name[collision.gameObject.name.Length - 1] == name[name.Length - 1])
         {
             gameManager.finishedPlayers++;
-            Debug.Log(name + " entered the goal");
+            Debug.Log(collision.name + " entered the "+name);
             gameManager.tryFinish();
         }
     }
@@ -56,7 +56,7 @@ public class GoalScript : MonoBehaviour
            && collision.gameObject.name[collision.gameObject.name.Length - 1] == name[name.Length - 1])
         {
             gameManager.finishedPlayers--;
-            Debug.Log(name + " left the goal");
+            Debug.Log(collision.name + " left the "+name);
         }
     }
 }

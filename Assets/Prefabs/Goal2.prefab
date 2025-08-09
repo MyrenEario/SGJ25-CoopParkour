@@ -166,4 +166,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goalWithPlayer: {fileID: 7010873455331462401, guid: d1862ab2f148278439e54ab49eeb2c05, type: 3}
-  deadY: 9
+  deadY: 7
