@@ -15,6 +15,7 @@ public class PlayerScript : MonoBehaviour
     public float castDistance;
     public LayerMask groundLayer;
 
+    private GameManager gameManager;
     private Animator anim;
     private Rigidbody2D rigBody;
 
@@ -23,6 +24,7 @@ public class PlayerScript : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rigBody = GetComponent<Rigidbody2D>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -66,7 +68,15 @@ public class PlayerScript : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 180, 0);
     }
 
-   
+    //private void OnCollision2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Goal") && 
+    //        collision.gameObject.name[collision.gameObject.name.Length-1] == name[name.Length - 1])
+    //    {
+    //        collision.gameObject.GetComponent<GoalScript>().finish();
+    //    }
+    //}
+
     public bool isGrounded()
     {
         return Physics2D.BoxCast(transform.position, boxSize, 0, -Vector2.up, castDistance, groundLayer);
