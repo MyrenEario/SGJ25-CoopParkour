@@ -31,9 +31,9 @@ public class GoalScript : MonoBehaviour
     }
     public void finish()
     {
-        //    spriteRend.sprite = goalWithPlayer;
-        //    // offset richtig machen
-        //    finished = true;
+        //spriteRend.sprite = goalWithPlayer;
+        //// offset richtig machen
+        //finished = true;
 
         Debug.Log("goal catched");
     }
@@ -45,6 +45,7 @@ public class GoalScript : MonoBehaviour
         {
             gameManager.finishedPlayers++;
             Debug.Log(name + " entered the goal");
+            spriteRend.sprite = goalWithPlayer;
             gameManager.testFinish();
         }
     }

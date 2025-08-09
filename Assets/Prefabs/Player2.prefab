@@ -19,7 +19,7 @@ GameObject:
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2171188560878760953
 Transform:
@@ -179,7 +179,9 @@ MonoBehaviour:
   playerNumber: 2
   speed: 5
   jumpForce: 10
-  groundFriction: 0.9
+  standard_mass: 1
+  falling_mass: 10
+  ground_friction: 0.5
   boxSize: {x: 0.4, y: 0.1}
   castDistance: 0.5
   groundLayer:

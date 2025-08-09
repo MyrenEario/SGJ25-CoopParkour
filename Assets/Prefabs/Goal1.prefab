@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 5577565903411859537}
   - component: {fileID: 8207151061380128093}
   - component: {fileID: 2109688193428678742}
+  - component: {fileID: -8127687182907663937}
   m_Layer: 0
   m_Name: Goal1
   m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4536799471171328607
 Transform:
@@ -146,9 +147,23 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.07}
   m_Radius: 0.1
+--- !u!114 &-8127687182907663937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6017897762269330610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8608fee940433b04ba0883454708595f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goalWithPlayer: {fileID: 588805393056176639, guid: 0aaf993a635c2e447b4b0eebaa3f8d5c, type: 3}
+  deadY: 9

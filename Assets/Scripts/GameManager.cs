@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
 
     public int finishedPlayers = 0;
 
-
     public int gameState = 0;
     // 0: Start
     // 1: running
@@ -19,6 +18,8 @@ public class GameManager : MonoBehaviour
 
     public bool gameOver = false;
 
+    //public string[] sceneList = { "SampleScene", "Level2", "Level3", "Level4", "Level5", "WizardLevel1" };
+    public int currentScene;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
         mainCamera = Camera.FindFirstObjectByType<Camera>();
         goal1 = GameObject.Find("Goal1");
         goal2 = GameObject.Find("Goal2");
+        currentScene = SceneManager.GetActiveScene().buildIndex;
     }
 
     void Update()
@@ -35,11 +37,23 @@ public class GameManager : MonoBehaviour
         {
             ResetScene();
         }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            loadPreviouseScene();
+        }
     }
 
     public void ResetScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void loadNextScene() 
+    {
+        SceneManager.LoadScene(currentScene-1 >= SceneManager.sceneCount ? 0 : currentScene-1);
+    }
+    public void loadPreviouseScene()
+    {
+        SceneManager.LoadScene(currentScene + 1 <= 0 ? SceneManager.sceneCount-1: currentScene + 1);
     }
 
     public void testFinish()
