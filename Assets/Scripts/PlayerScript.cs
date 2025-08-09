@@ -6,7 +6,6 @@ public class PlayerScript : MonoBehaviour
     public float speed = 5.0f;
     public float jumpForce = 10.0f;
 
-    public float groundFriction = 0.9f;
 
     public float standard_mass = 1;
     public float falling_mass = 10;
@@ -35,7 +34,15 @@ public class PlayerScript : MonoBehaviour
     {
         float movement = Input.GetAxis("Player " + playerNumber + " Horizontal");
         // Bewegung
-        rigBody.linearVelocityX = speed * movement;
+        if (0 < movement && rigBody.linearVelocityX <= speed * movement || 
+            0 > movement && rigBody.linearVelocityX >= speed * movement)
+        { 
+            rigBody.linearVelocityX = speed * movement;
+        }
+        if (movement == 0 && isGrounded())
+        {
+            rigBody.linearVelocityX = 0;
+        }
 
         if (rigBody.linearVelocityY < -5)
         {
