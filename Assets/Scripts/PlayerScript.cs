@@ -8,6 +8,9 @@ public class PlayerScript : MonoBehaviour
 
     public float groundFriction = 0.9f;
 
+    public float standard_mass = 1;
+    public float falling_mass = 10;
+
     public Vector2 boxSize;
     public float castDistance;
     public LayerMask groundLayer;
@@ -33,6 +36,15 @@ public class PlayerScript : MonoBehaviour
         float movement = Input.GetAxis("Player " + playerNumber + " Horizontal");
         // Bewegung
         rigBody.linearVelocityX = speed * movement;
+
+        if (rigBody.linearVelocityY < -0.1)
+        {
+            rigBody.mass = falling_mass;
+        }
+        else
+        {
+            rigBody.mass = standard_mass;
+        }
     }
 
     void MakeItMove()

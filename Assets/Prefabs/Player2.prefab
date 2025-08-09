@@ -179,6 +179,7 @@ MonoBehaviour:
   playerNumber: 2
   speed: 5
   jumpForce: 10
+  groundFriction: 0.9
   boxSize: {x: 0.4, y: 0.1}
   castDistance: 0.5
   groundLayer:
