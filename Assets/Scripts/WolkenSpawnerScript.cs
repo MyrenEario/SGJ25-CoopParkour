@@ -10,7 +10,7 @@ public class WolkenSpawnerScript : MonoBehaviour
     public float maxY = 4.5f;
 
     private float timeSinceLastSpawn = 0;
-    private float timeToNextSpawn = 1;
+    private float timeToNextSpawn = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
