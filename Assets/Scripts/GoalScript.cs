@@ -21,9 +21,11 @@ public class GoalScript : MonoBehaviour
     {
         if (finished)
         {
-            transform.Translate(Vector3.up * speed);
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
             if (transform.position.y > deadY)
             {
+                gameManager.finishedPlayers--;
+                gameManager.tryNextScene();
                 Destroy(gameObject);
             }
         }
@@ -31,22 +33,22 @@ public class GoalScript : MonoBehaviour
     }
     public void finish()
     {
-        //spriteRend.sprite = goalWithPlayer;
-        //// offset richtig machen
-        //finished = true;
+        spriteRend.sprite = goalWithPlayer;
+        // offset richtig machen
+        finished = true;
 
-        Debug.Log("goal catched");
+        Debug.Log("See you");
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(name);
         if (collision.gameObject.CompareTag("Player")
             && collision.gameObject.name[collision.gameObject.name.Length - 1] == name[name.Length - 1])
         {
+            finish();
+
             gameManager.finishedPlayers++;
             Debug.Log(name + " entered the goal");
-            spriteRend.sprite = goalWithPlayer;
-            gameManager.testFinish();
+            gameManager.tryFinish();
         }
     }
 

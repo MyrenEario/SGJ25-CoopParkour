@@ -10,17 +10,10 @@ public class GameManager : MonoBehaviour
     public Camera mainCamera;
 
     public int finishedPlayers = 0;
-
-    public int gameState = 0;
-    // 0: Start
-    // 1: running
-    // 2: paused
-
+    public int currentScene;
     public bool gameOver = false;
 
-    //public string[] sceneList = { "SampleScene", "Level2", "Level3", "Level4", "Level5", "WizardLevel1" };
-    public int currentScene;
-
+    
     void Start()
     {
         player1 = GameObject.Find("Player1");
@@ -56,12 +49,21 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(currentScene - 1 < 0 ? SceneManager.sceneCountInBuildSettings-1: currentScene - 1);
     }
 
-    public void testFinish()
+    public void tryFinish()
     {
         if (finishedPlayers == 2)
         {
             goal1.GetComponent<GoalScript>().finish();
             goal2.GetComponent<GoalScript>().finish();
+            player1.SetActive(false);
+            player2.SetActive(false);
+        }
+    }
+    public void tryNextScene()
+    {
+        if (finishedPlayers == 0)
+        {
+            loadNextScene();
         }
     }
 }
