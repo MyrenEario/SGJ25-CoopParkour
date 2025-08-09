@@ -489,7 +489,11 @@ MonoBehaviour:
   playerNumber: 1
   speed: 5
   jumpForce: 10
-  touchFloor: 0
+  boxSize: {x: 0.4, y: 0.1}
+  castDistance: 0.5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!61 &634382328
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -549,7 +553,7 @@ GameObject:
   - component: {fileID: 733116924}
   - component: {fileID: 733116923}
   - component: {fileID: 733116927}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -714,7 +718,11 @@ MonoBehaviour:
   playerNumber: 2
   speed: 5
   jumpForce: 10
-  touchFloor: 0
+  boxSize: {x: 0, y: 0}
+  castDistance: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &2052911167
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,6 +946,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jigsaw
       objectReference: {fileID: 0}
+    - target: {fileID: 2425088832562700881, guid: 6868e2c7f7b8b054499142c7d7a13513, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3765754818161449466, guid: 6868e2c7f7b8b054499142c7d7a13513, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -991,9 +1003,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 569046184739902028, guid: 1650fa38d2830434f82d977a2edb13d5, type: 3}
+      propertyPath: m_TileSpriteArray.Array.size
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2924667786234125155, guid: 1650fa38d2830434f82d977a2edb13d5, type: 3}
       propertyPath: m_Name
       value: Grid
+      objectReference: {fileID: 0}
+    - target: {fileID: 2924667786234125155, guid: 1650fa38d2830434f82d977a2edb13d5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4200553503340638106, guid: 1650fa38d2830434f82d977a2edb13d5, type: 3}
       propertyPath: m_Size.x
@@ -1746,6 +1766,10 @@ PrefabInstance:
     - target: {fileID: 4200553503340638106, guid: 1650fa38d2830434f82d977a2edb13d5, type: 3}
       propertyPath: m_Tiles.Array.data[28].second.m_TileObjectToInstantiateIndex
       value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806321827966361797, guid: 1650fa38d2830434f82d977a2edb13d5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5167893875650376046, guid: 1650fa38d2830434f82d977a2edb13d5, type: 3}
       propertyPath: m_LocalPosition.x

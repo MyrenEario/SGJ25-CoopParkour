@@ -5,7 +5,11 @@ public class PlayerScript : MonoBehaviour
     public int playerNumber = 1;
     public float speed = 5.0f;
     public float jumpForce = 10.0f;
-    public bool touchFloor = false;
+
+    public Vector2 boxSize;
+    public float castDistance;
+    public LayerMask groundLayer;
+
 
     private Rigidbody2D rigBody;
 
@@ -28,10 +32,9 @@ public class PlayerScript : MonoBehaviour
         transform.Translate(new Vector3(speed * Time.deltaTime *Mathf.Abs(movement),0));
         
         // Sprung
-        if (touchFloor && Input.GetKeyDown( playerNumber == 1? KeyCode.W: KeyCode.UpArrow))
+        if (isGrounded() && Input.GetKeyDown( playerNumber == 1? KeyCode.W: KeyCode.UpArrow))
         {
             rigBody.AddForce(new Vector2(0,jumpForce),ForceMode2D.Impulse);
-            touchFloor = false;
         }
 
         // Rotation
@@ -41,11 +44,9 @@ public class PlayerScript : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 180, 0);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+   
+    public bool isGrounded()
     {
-        if (!collision.gameObject.CompareTag("Player"))
-        {
-            touchFloor = true;
-        }
+        return Physics2D.BoxCast(transform.position, boxSize, 0, -Vector2.up, castDistance, groundLayer);
     }
 }
