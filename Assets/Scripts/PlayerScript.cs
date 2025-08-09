@@ -6,10 +6,11 @@ public class PlayerScript : MonoBehaviour
     public float speed = 5.0f;
     public float jumpForce = 10.0f;
 
-    public float groundFriction = 0.9f;
 
     public float standard_mass = 1;
     public float falling_mass = 10;
+
+    public float ground_friction = 0.5f;
 
     public Vector2 boxSize;
     public float castDistance;
@@ -37,9 +38,26 @@ public class PlayerScript : MonoBehaviour
     {
         float movement = Input.GetAxis("Player " + playerNumber + " Horizontal");
         // Bewegung
-        rigBody.linearVelocityX = speed * movement;
+        if (0 < movement && rigBody.linearVelocityX <= speed * movement || 
+            0 > movement && rigBody.linearVelocityX >= speed * movement)
+        { 
+            rigBody.linearVelocityX = speed * movement;
+        }
 
-        if (rigBody.linearVelocityY < -0.1)
+        if (isGrounded())
+        {
+            if (rigBody.linearVelocityX >= 1.1f * speed || rigBody.linearVelocityX <= -1.1f * speed)
+            {
+                rigBody.linearVelocityY = jumpForce;
+            }
+            else if(movement == 0)
+            { 
+                rigBody.linearVelocityX = (1 - ground_friction) * rigBody.linearVelocityX;
+            }
+        }
+
+
+        if (rigBody.linearVelocityY < -5)
         {
             rigBody.mass = falling_mass;
         }
@@ -58,7 +76,7 @@ public class PlayerScript : MonoBehaviour
         // Sprung
         if (isGrounded() && Input.GetKeyDown( playerNumber == 1? KeyCode.W: KeyCode.UpArrow))
         {
-            rigBody.AddForce(new Vector2(0,jumpForce),ForceMode2D.Impulse);
+            rigBody.linearVelocityY = jumpForce;
         }
 
         // Rotation
