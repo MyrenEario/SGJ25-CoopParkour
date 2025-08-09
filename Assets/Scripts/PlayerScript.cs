@@ -37,7 +37,7 @@ public class PlayerScript : MonoBehaviour
         // Bewegung
         rigBody.linearVelocityX = speed * movement;
 
-        if (rigBody.linearVelocityY < -0.1)
+        if (rigBody.linearVelocityY < -5)
         {
             rigBody.mass = falling_mass;
         }
@@ -56,7 +56,7 @@ public class PlayerScript : MonoBehaviour
         // Sprung
         if (isGrounded() && Input.GetKeyDown( playerNumber == 1? KeyCode.W: KeyCode.UpArrow))
         {
-            rigBody.AddForce(new Vector2(0,jumpForce),ForceMode2D.Impulse);
+            rigBody.linearVelocityY = jumpForce;
         }
 
         // Rotation
