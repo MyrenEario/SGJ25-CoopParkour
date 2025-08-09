@@ -1,22 +1,28 @@
 fileFormatVersion: 2
-guid: feb604dc0f3de1049b16dea67360b7db
+guid: bf979237a2fd6f94b884152d2cca09e2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3304655657266664864
-    second: jump_spritesheet_0
+      213: -5771691187248850798
+    second: walk_spritesheet_0
   - first:
-      213: 7086789578548970676
-    second: jump_spritesheet_1
+      213: -1776930519425201920
+    second: walk_spritesheet_1
   - first:
-      213: 4368222839905027665
-    second: jump_spritesheet_2
+      213: -3014939641355087566
+    second: walk_spritesheet_2
   - first:
-      213: -2667476317540423540
-    second: jump_spritesheet_3
+      213: 3805813946860138594
+    second: walk_spritesheet_3
   - first:
-      213: -5162411571413771110
-    second: jump_spritesheet_4
+      213: 3530247842679880377
+    second: walk_spritesheet_4
+  - first:
+      213: 158564682717673697
+    second: walk_spritesheet_5
+  - first:
+      213: 1985819478114460211
+    second: walk_spritesheet_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -108,17 +114,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jump_spritesheet_0
+      name: walk_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 132
-        width: 19
-        height: 26
+        x: 8
+        y: 196
+        width: 14
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,19 +159,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06aa2a340318322d0800000000000000
-      internalID: -3304655657266664864
+      spriteID: 29897c6e175d6efa0800000000000000
+      internalID: -5771691187248850798
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_spritesheet_1
+      name: walk_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 11
-        y: 100
+        x: 8
+        y: 164
         width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0094c1f6b131757e0800000000000000
+      internalID: -1776930519425201920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 130
+        width: 15
         height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -149,18 +203,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4b40a530395595260800000000000000
-      internalID: 7086789578548970676
+      spriteID: 23159c9be58c826d0800000000000000
+      internalID: -3014939641355087566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_spritesheet_2
+      name: walk_spritesheet_3
       rect:
         serializedVersion: 2
         x: 7
-        y: 71
+        y: 100
         width: 16
         height: 24
       alignment: 0
@@ -171,19 +225,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1568940778b0f9c30800000000000000
-      internalID: 4368222839905027665
+      spriteID: 26073dfde97f0d430800000000000000
+      internalID: 3805813946860138594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_spritesheet_3
+      name: walk_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 6
-        y: 39
-        width: 17
+        x: 8
+        y: 68
+        width: 12
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -193,19 +247,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c886c3e0c683bfad0800000000000000
-      internalID: -2667476317540423540
+      spriteID: 9baf50875b5fdf030800000000000000
+      internalID: 3530247842679880377
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump_spritesheet_4
+      name: walk_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 5
-        y: 4
-        width: 19
+        x: 8
+        y: 34
+        width: 15
         height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -215,8 +269,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9c1485070e6b58b0800000000000000
-      internalID: -5162411571413771110
+      spriteID: 1e83f432db5533200800000000000000
+      internalID: 158564682717673697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 4
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33260154b4c0f8b10800000000000000
+      internalID: 1985819478114460211
       vertices: []
       indices: 
       edges: []
@@ -235,11 +311,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      jump_spritesheet_0: -3304655657266664864
-      jump_spritesheet_1: 7086789578548970676
-      jump_spritesheet_2: 4368222839905027665
-      jump_spritesheet_3: -2667476317540423540
-      jump_spritesheet_4: -5162411571413771110
+      walk_spritesheet_0: -5771691187248850798
+      walk_spritesheet_1: -1776930519425201920
+      walk_spritesheet_2: -3014939641355087566
+      walk_spritesheet_3: 3805813946860138594
+      walk_spritesheet_4: 3530247842679880377
+      walk_spritesheet_5: 158564682717673697
+      walk_spritesheet_6: 1985819478114460211
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -21,7 +21,7 @@ public class PlayerScript : MonoBehaviour
         rigBody = GetComponent<Rigidbody2D>();
     }
 
-        // Update is called once per frame
+    // Update is called once per frame
     void Update()
     {
         MakeItMove();
@@ -44,7 +44,6 @@ public class PlayerScript : MonoBehaviour
         if (isGrounded() && Input.GetKeyDown( playerNumber == 1? KeyCode.W: KeyCode.UpArrow))
         {
             rigBody.AddForce(new Vector2(0,jumpForce),ForceMode2D.Impulse);
-            anim.SetTrigger("jump");
         }
 
         // Rotation
