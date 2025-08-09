@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.N))
         {
-            loadPreviouseScene();
+            loadNextScene();
         }
     }
 
@@ -49,11 +49,11 @@ public class GameManager : MonoBehaviour
     }
     public void loadNextScene() 
     {
-        SceneManager.LoadScene(currentScene-1 >= SceneManager.sceneCount ? 0 : currentScene-1);
+        SceneManager.LoadScene(currentScene + 1 >= SceneManager.sceneCountInBuildSettings ? 0 : currentScene + 1);
     }
     public void loadPreviouseScene()
     {
-        SceneManager.LoadScene(currentScene + 1 <= 0 ? SceneManager.sceneCount-1: currentScene + 1);
+        SceneManager.LoadScene(currentScene - 1 < 0 ? SceneManager.sceneCountInBuildSettings-1: currentScene - 1);
     }
 
     public void testFinish()
