@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: aa968a1cdaa4db847ab600d6d235ff8c
+guid: 013a700f7aa6d454a93e1fb048677602
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3403599625058161643
-    second: RunFrame1_0
+      213: -8592534788206423078
+    second: jump2_spritesheet_0
+  - first:
+      213: 4811141864953788307
+    second: jump2_spritesheet_1
+  - first:
+      213: -29826957487996072
+    second: jump2_spritesheet_2
+  - first:
+      213: -1037277683924714711
+    second: jump2_spritesheet_3
+  - first:
+      213: 9211886067493989350
+    second: jump2_spritesheet_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -126,13 +138,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RunFrame1_0
+      name: jump2_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 19
-        width: 50
-        height: 90
+        x: 5
+        y: 132
+        width: 19
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +153,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51c61ce8c2cf3c0d0800000000000000
-      internalID: -3403599625058161643
+      spriteID: ad315c4a22f21c880800000000000000
+      internalID: -8592534788206423078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump2_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 100
+        width: 12
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 397b490290c94c240800000000000000
+      internalID: 4811141864953788307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump2_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 71
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 853823a4a88069ff0800000000000000
+      internalID: -29826957487996072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump2_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 39
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92b3a343179da91f0800000000000000
+      internalID: -1037277683924714711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump2_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 4
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eb695c529137df70800000000000000
+      internalID: 9211886067493989350
       vertices: []
       indices: 
       edges: []
@@ -161,7 +261,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      RunFrame1_0: -3403599625058161643
+      jump2_spritesheet_0: -8592534788206423078
+      jump2_spritesheet_1: 4811141864953788307
+      jump2_spritesheet_2: -29826957487996072
+      jump2_spritesheet_3: -1037277683924714711
+      jump2_spritesheet_4: 9211886067493989350
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
