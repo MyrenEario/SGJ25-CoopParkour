@@ -596,6 +596,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4536799471171328607, guid: 232b4225d81d387499241f59a0463f6c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536799471171328607, guid: 232b4225d81d387499241f59a0463f6c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.94
+      objectReference: {fileID: 0}
     - target: {fileID: 4570654501153511643, guid: 232b4225d81d387499241f59a0463f6c, type: 3}
       propertyPath: m_Name
       value: Goal1
@@ -613,6 +621,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4311588243073363468, guid: a5341fc76585a9248a015e5a4ab29458, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311588243073363468, guid: a5341fc76585a9248a015e5a4ab29458, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.93
+      objectReference: {fileID: 0}
     - target: {fileID: 4536799471171328607, guid: a5341fc76585a9248a015e5a4ab29458, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.25
@@ -829,7 +845,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 634382322}
   player2: {fileID: 733116922}
+  goal1: {fileID: 0}
+  goal2: {fileID: 0}
   mainCamera: {fileID: 519420031}
+  finishedPlayers: 0
   gameState: 0
   gameOver: 0
 --- !u!4 &2131287727
