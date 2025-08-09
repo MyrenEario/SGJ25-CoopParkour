@@ -4,6 +4,7 @@ public class PlayerScript : MonoBehaviour
 {
     public int playerNumber = 1;
     public float speed = 5.0f;
+    public float speed_delta = 0.0001f;
     public float jumpForce = 10.0f;
 
     public Vector2 boxSize;
@@ -26,11 +27,16 @@ public class PlayerScript : MonoBehaviour
         MakeItMove();
     }
 
-    void MakeItMove()
+    void FixedUpdate()
     {
         float movement = Input.GetAxis("Player " + playerNumber + " Horizontal");
         // Bewegung
-        transform.Translate(new Vector3(speed * Time.deltaTime *Mathf.Abs(movement),0));
+        rigBody.AddForce(new Vector3(speed_delta * speed *movement,0),ForceMode2D.Impulse);
+    }
+
+    void MakeItMove()
+    {
+        float movement = Input.GetAxis("Player " + playerNumber + " Horizontal");
         anim.SetFloat("Speed", Mathf.Abs(movement));
         anim.SetBool("grounded", isGrounded());
 

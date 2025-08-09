@@ -740,7 +740,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 11
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1441,8 +1441,8 @@ Tilemap:
     m_Data: {fileID: -1370208970, guid: fe303547f8537cc4ab19da8734795cac, type: 3}
   - m_RefCount: 30
     m_Data: {fileID: -948823915, guid: fe303547f8537cc4ab19da8734795cac, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 1215420791, guid: fe303547f8537cc4ab19da8734795cac, type: 3}
   - m_RefCount: 18
     m_Data: {fileID: -1605610950, guid: fe303547f8537cc4ab19da8734795cac, type: 3}
   - m_RefCount: 1
@@ -1453,8 +1453,6 @@ Tilemap:
     m_Data: {fileID: 5663061954668274717, guid: fe303547f8537cc4ab19da8734795cac, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -1790686767, guid: fe303547f8537cc4ab19da8734795cac, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 1215420791, guid: fe303547f8537cc4ab19da8734795cac, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 98
     m_Data:
@@ -1607,7 +1605,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b0d246738c0e87e45a27814ed645e249, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
