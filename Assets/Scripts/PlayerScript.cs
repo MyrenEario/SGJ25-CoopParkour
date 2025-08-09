@@ -10,6 +10,8 @@ public class PlayerScript : MonoBehaviour
     public float standard_mass = 1;
     public float falling_mass = 10;
 
+    public float ground_friction = 0.5f;
+
     public Vector2 boxSize;
     public float castDistance;
     public LayerMask groundLayer;
@@ -39,10 +41,19 @@ public class PlayerScript : MonoBehaviour
         { 
             rigBody.linearVelocityX = speed * movement;
         }
-        if (movement == 0 && isGrounded())
+
+        if (isGrounded())
         {
-            rigBody.linearVelocityX = 0;
+            if (rigBody.linearVelocityX >= 1.1f * speed || rigBody.linearVelocityX <= -1.1f * speed)
+            {
+                rigBody.linearVelocityY = jumpForce;
+            }
+            else if(movement == 0)
+            { 
+                rigBody.linearVelocityX = (1 - ground_friction) * rigBody.linearVelocityX;
+            }
         }
+
 
         if (rigBody.linearVelocityY < -5)
         {
