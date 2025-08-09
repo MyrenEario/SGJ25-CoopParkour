@@ -4,7 +4,6 @@ public class PlayerScript : MonoBehaviour
 {
     public int playerNumber = 1;
     public float speed = 5.0f;
-    public float speed_delta = 0.0000001f;
     public float jumpForce = 10.0f;
 
     public float groundFriction = 0.9f;
@@ -33,12 +32,7 @@ public class PlayerScript : MonoBehaviour
     {
         float movement = Input.GetAxis("Player " + playerNumber + " Horizontal");
         // Bewegung
-        rigBody.linearVelocity = rigBody.linearVelocity + new Vector2(speed_delta * speed * movement,0);
-
-        if (movement == 0 && isGrounded()) 
-        {
-            rigBody.linearVelocity = (1- groundFriction) * rigBody.linearVelocity;
-        }
+        rigBody.linearVelocityX = speed * movement;
     }
 
     void MakeItMove()
