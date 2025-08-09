@@ -10,16 +10,17 @@ public class PlayerScript : MonoBehaviour
     public float castDistance;
     public LayerMask groundLayer;
 
-
+    private Animator anim;
     private Rigidbody2D rigBody;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        anim = GetComponent<Animator>();
         rigBody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+        // Update is called once per frame
     void Update()
     {
         MakeItMove();
@@ -30,11 +31,14 @@ public class PlayerScript : MonoBehaviour
         float movement = Input.GetAxis("Player " + playerNumber + " Horizontal");
         // Bewegung
         transform.Translate(new Vector3(speed * Time.deltaTime *Mathf.Abs(movement),0));
-        
+        anim.SetFloat("Speed", Mathf.Abs(movement));
+        anim.SetBool("grounded", isGrounded());
+
         // Sprung
         if (isGrounded() && Input.GetKeyDown( playerNumber == 1? KeyCode.W: KeyCode.UpArrow))
         {
             rigBody.AddForce(new Vector2(0,jumpForce),ForceMode2D.Impulse);
+            anim.SetTrigger("jump");
         }
 
         // Rotation
