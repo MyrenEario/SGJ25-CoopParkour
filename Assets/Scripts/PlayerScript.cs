@@ -49,4 +49,9 @@ public class PlayerScript : MonoBehaviour
     {
         return Physics2D.BoxCast(transform.position, boxSize, 0, -Vector2.up, castDistance, groundLayer);
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawCube(transform.position - Vector3.up * castDistance, boxSize);
+    }
 }

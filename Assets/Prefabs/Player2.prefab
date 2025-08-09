@@ -179,7 +179,7 @@ MonoBehaviour:
   speed: 5
   jumpForce: 10
   boxSize: {x: 0.4, y: 0.1}
-  castDistance: 0
+  castDistance: 0.65
   groundLayer:
     serializedVersion: 2
     m_Bits: 192
