@@ -44,8 +44,6 @@ public class GoalScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player")
             && collision.gameObject.name[collision.gameObject.name.Length - 1] == name[name.Length - 1])
         {
-            finish();
-
             gameManager.finishedPlayers++;
             Debug.Log(name + " entered the goal");
             gameManager.tryFinish();
