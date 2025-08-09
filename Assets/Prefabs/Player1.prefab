@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4340751882839399253}
   - component: {fileID: 6943813013477049466}
   - component: {fileID: 68864130466713207}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -178,4 +178,8 @@ MonoBehaviour:
   playerNumber: 1
   speed: 5
   jumpForce: 10
-  touchFloor: 0
+  boxSize: {x: 0.4, y: 0.1}
+  castDistance: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 320
