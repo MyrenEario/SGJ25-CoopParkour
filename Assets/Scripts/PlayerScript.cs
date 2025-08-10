@@ -49,7 +49,7 @@ public class PlayerScript : MonoBehaviour
 
         if (isGrounded())
         {
-            if (rigBody.linearVelocityX >= 1.1f * speed || rigBody.linearVelocityX <= -1.1f * speed)
+            if (rigBody.linearVelocityX >= 1.5f * speed || rigBody.linearVelocityX <= -1.5f * speed)
             {
                 rigBody.linearVelocityY = jumpForce;
             }
