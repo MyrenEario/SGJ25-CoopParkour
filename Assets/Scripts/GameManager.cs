@@ -42,10 +42,12 @@ public class GameManager : MonoBehaviour
 
     public void ResetScene()
     {
+        Debug.Log("Reloading Scene");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void loadNextScene() 
     {
+        Debug.Log("Loading next Scene: "+(currentScene + 1 >= SceneManager.sceneCountInBuildSettings ? 0 : currentScene + 1) + "/" + SceneManager.sceneCountInBuildSettings);
         SceneManager.LoadScene(currentScene + 1 >= SceneManager.sceneCountInBuildSettings ? 0 : currentScene + 1);
     }
     public void loadPreviouseScene()

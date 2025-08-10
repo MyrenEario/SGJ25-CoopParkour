@@ -23,7 +23,7 @@ public class WizardScript : MonoBehaviour
     {
         if (finished)
         {
-            transform.Translate(Vector3.up * Time.deltaTime * speed);
+            transform.Translate(Vector3.up * Time.deltaTime * speed,Space.World);
         }
         if (transform.position.y > deadY)
         {
@@ -36,6 +36,7 @@ public class WizardScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         spriteRend.sprite = withBallon;
+        finished = true; 
         Destroy(collision.gameObject);
     }
 }
