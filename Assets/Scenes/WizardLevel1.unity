@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5f9b1a57abdba428fa625c102ac7a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goal1: {fileID: 2084271678}
-  goal2: {fileID: 1688559469}
+  goal1: {fileID: 0}
+  goal2: {fileID: 0}
   withBallon: {fileID: -7970887149220250927, guid: a264faff8eb9b00458c6a7212c6af73b, type: 3}
   speed: 3
   deadY: 7
@@ -828,11 +828,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d16077ddd0607c4b9aa876da6321025, type: 3}
---- !u!1 &1688559469 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4570654501153511643, guid: 232b4225d81d387499241f59a0463f6c, type: 3}
-  m_PrefabInstance: {fileID: 947775932}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1763792971 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4229954115961974566, guid: 05e9b2a2f787dfd47a4c5bab883cceaf, type: 3}
@@ -1022,6 +1017,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5248079859056632889, guid: 05e9b2a2f787dfd47a4c5bab883cceaf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.66
+      objectReference: {fileID: 0}
     - target: {fileID: 5346520493012546927, guid: 05e9b2a2f787dfd47a4c5bab883cceaf, type: 3}
       propertyPath: m_Size.x
       value: 1.6156383
@@ -1045,6 +1044,14 @@ PrefabInstance:
     - target: {fileID: 5346520493012546927, guid: 05e9b2a2f787dfd47a4c5bab883cceaf, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8770673572026104318, guid: 05e9b2a2f787dfd47a4c5bab883cceaf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8770673572026104318, guid: 05e9b2a2f787dfd47a4c5bab883cceaf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.38
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -1126,11 +1133,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5341fc76585a9248a015e5a4ab29458, type: 3}
---- !u!1 &2084271678 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6017897762269330610, guid: a5341fc76585a9248a015e5a4ab29458, type: 3}
-  m_PrefabInstance: {fileID: 1899653513}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
