@@ -36,7 +36,7 @@ public class WolkenSpawnerScript : MonoBehaviour
 
     private void spawnRandomWolke(float x)
     {
-        GameObject w = Instantiate(wolkenPrefab, new Vector3(x, Random.Range(minY, maxY), 0), wolkenPrefab.transform.rotation);
+        GameObject w = Instantiate(wolkenPrefab, new Vector3(x, Random.Range(minY, maxY), 1), wolkenPrefab.transform.rotation);
         w.gameObject.GetComponent<SpriteRenderer>().sprite = wolkenAussehen[Random.Range(0, wolkenAussehen.Length - 1)];
     }
 }
