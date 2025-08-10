@@ -7,6 +7,7 @@ public class PlayerScript : MonoBehaviour
     public int playerNumber = 1;
     public float speed = 5.0f;
     public float jumpForce = 10.0f;
+    public float deadY = -40.0f;
     private float jumpPadMultiplier = 2.0f;
 
 
@@ -99,6 +100,11 @@ public class PlayerScript : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, 0);
         else if (movement < 0)
             transform.rotation = Quaternion.Euler(0, 180, 0);
+
+        if (transform.position.y <= deadY)
+        {
+            gameManager.ResetScene();
+        }
     }
 
     //private void OnCollision2D(Collision2D collision)
