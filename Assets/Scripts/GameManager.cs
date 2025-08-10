@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public Camera mainCamera;
 
     public int finishedPlayers = 0;
+    public int offscreenPlayers = 0;
     public int currentScene;
     public bool gameOver = false;
 
@@ -70,7 +71,7 @@ public class GameManager : MonoBehaviour
     public void tryNextScene()
     {
         Debug.Log("finished Players: "+finishedPlayers);
-        if (finishedPlayers <= 0)
+        if (offscreenPlayers >= 2)
         {
             loadNextScene();
         }

@@ -24,7 +24,7 @@ public class GoalScript : MonoBehaviour
             transform.Translate(Vector3.up * speed * Time.deltaTime);
             if (transform.position.y > deadY)
             {
-                gameManager.finishedPlayers--;
+                gameManager.offscreenPlayers++;
                 gameManager.tryNextScene();
                 Destroy(gameObject);
             }
@@ -33,11 +33,10 @@ public class GoalScript : MonoBehaviour
     }
     public void finish()
     {
+        transform.position = transform.position - Vector3.forward;
         spriteRend.sprite = goalWithPlayer;
         // offset richtig machen
         finished = true;
-
-        Debug.Log("See you");
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
