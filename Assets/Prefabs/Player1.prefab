@@ -176,17 +176,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e9dde63d42cc4d4691f8d15856e355d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  otherPlayer: {fileID: 0}
   playerNumber: 1
   speed: 5
   jumpForce: 10
   standard_mass: 1
   falling_mass: 10
   ground_friction: 0.5
-  boxSize: {x: 0.4, y: 0.1}
-  castDistance: 0.5
   groundLayer:
     serializedVersion: 2
     m_Bits: 320
+  playerLayer1:
+    serializedVersion: 2
+    m_Bits: 128
+  playerLayer2:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!95 &2972845095103060247
 Animator:
   serializedVersion: 7

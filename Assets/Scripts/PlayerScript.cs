@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    public GameObject otherPlayer;
+
     public int playerNumber = 1;
     public float speed = 5.0f;
     public float jumpForce = 10.0f;
@@ -13,9 +15,15 @@ public class PlayerScript : MonoBehaviour
 
     public float ground_friction = 0.5f;
 
-    public Vector2 boxSize;
-    public float castDistance;
-    public LayerMask groundLayer;
+    public static Vector2 boxSize = new Vector2(0.4f, 0.1f);
+    public static float castDistance = 0.5f;
+    public  LayerMask groundLayer;
+
+    public static Vector2 kickBox = new Vector2 (0.3f, 0.5f);
+    public static float kickRange = -0.4f;
+    public static float kickForce = 6.5f;
+    public LayerMask playerLayer1;
+    public LayerMask playerLayer2;
 
     private GameManager gameManager;
     private Animator anim;
@@ -27,12 +35,15 @@ public class PlayerScript : MonoBehaviour
         anim = GetComponent<Animator>();
         rigBody = GetComponent<Rigidbody2D>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+        otherPlayer = GameObject.Find("Player" + (playerNumber == 1 ? "2" : "1"));
     }
 
     //Update is called once per frame
     void Update()
     {
         MakeItMove();
+        MakeItKick();
     }
 
     void FixedUpdate()
@@ -50,7 +61,7 @@ public class PlayerScript : MonoBehaviour
 
         if (isGrounded())
         {
-            if (rigBody.linearVelocityX >= 1.5f * speed || rigBody.linearVelocityX <= -1.5f * speed)
+            if (rigBody.linearVelocityX >= 2f * speed || rigBody.linearVelocityX <= -1.5f * speed)
             {
                 rigBody.linearVelocityY = jumpForce;
             }
@@ -99,6 +110,20 @@ public class PlayerScript : MonoBehaviour
     //    }
     //}
 
+    void MakeItKick()
+    {
+        if (Input.GetKeyDown((playerNumber == 1? KeyCode.S: KeyCode.DownArrow)))
+        {
+            anim.SetTrigger("Kick");
+            if(Physics2D.BoxCast(transform.position, kickBox,0, Vector2.right * (transform.rotation.y.Equals(-1) ? 1: -1), kickRange,playerNumber == 1? playerLayer2 : playerLayer1))
+            {
+                otherPlayer.GetComponent<Rigidbody2D>().linearVelocity += Vector2.right * kickForce * (transform.rotation.y.Equals(-1) ? -1 : 1) + Vector2.up* jumpForce;
+            }
+        }
+    }
+  
+    //* (transform.rotation.y == 180 ? 1 : -1)
+
     public bool isGrounded()
     {
         return Physics2D.BoxCast(transform.position, boxSize, 0, -Vector2.up, castDistance, groundLayer);
@@ -107,6 +132,7 @@ public class PlayerScript : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawCube(transform.position - Vector3.up * castDistance, boxSize);
+        Gizmos.DrawCube(transform.position - Vector3.right * kickRange * (transform.rotation.y.Equals(-1) ? -1 : 1), kickBox);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
