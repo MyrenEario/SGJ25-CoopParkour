@@ -2,13 +2,11 @@ using UnityEngine;
 
 public class WizardScript : MonoBehaviour
 {
-    public GameObject goal1;
-    public GameObject goal2;
-
     public Sprite withBallon;
     public float speed = 3.0f;
     public float deadY = 7.0f;
 
+    private GameManager gameManager;
     private Animator animat;
     private Rigidbody2D rigBody;
     private bool finished = false;
@@ -18,11 +16,7 @@ public class WizardScript : MonoBehaviour
     {
         animat = GetComponent<Animator>();
         rigBody = GetComponent<Rigidbody2D>();
-        goal1 = GameObject.Find("Goal1");
-        goal2 = GameObject.Find("Goal2");
-        goal1.SetActive(false);
-        goal2.SetActive(false);
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
 
@@ -35,8 +29,7 @@ public class WizardScript : MonoBehaviour
         }
         if (transform.position.y > deadY)
         {
-            goal1.SetActive(true);
-            goal2.SetActive(true);
+            gameManager.loadNextScene();
             Destroy(gameObject);
         }
     }
