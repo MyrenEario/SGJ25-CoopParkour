@@ -47,11 +47,12 @@ public class GameManager : MonoBehaviour
     }
     public void loadNextScene() 
     {
-        Debug.Log("Loading next Scene: "+(currentScene + 1 >= SceneManager.sceneCountInBuildSettings ? 0 : currentScene + 1) + "/" + SceneManager.sceneCountInBuildSettings);
+        Debug.Log("Loading next Scene: "+(currentScene + 1 >= SceneManager.sceneCountInBuildSettings ? 0 : currentScene + 1) + "/" + (SceneManager.sceneCountInBuildSettings-1));
         SceneManager.LoadScene(currentScene + 1 >= SceneManager.sceneCountInBuildSettings ? 0 : currentScene + 1);
     }
     public void loadPreviouseScene()
     {
+        Debug.Log("Loading previouse Scene: " + (currentScene - 1 < 0 ? SceneManager.sceneCountInBuildSettings - 1 : currentScene - 1) + "/" + (SceneManager.sceneCountInBuildSettings - 1));
         SceneManager.LoadScene(currentScene - 1 < 0 ? SceneManager.sceneCountInBuildSettings-1: currentScene - 1);
     }
 
