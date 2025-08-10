@@ -267,6 +267,7 @@ MonoBehaviour:
   goal2: {fileID: 0}
   mainCamera: {fileID: 0}
   finishedPlayers: 0
+  offscreenPlayers: 0
   currentScene: 0
   gameOver: 0
 --- !u!114 &6726885015430175717
