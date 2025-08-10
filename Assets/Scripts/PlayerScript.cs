@@ -5,6 +5,7 @@ public class PlayerScript : MonoBehaviour
     public int playerNumber = 1;
     public float speed = 5.0f;
     public float jumpForce = 10.0f;
+    private float jumpPadMultiplier = 2.0f;
 
 
     public float standard_mass = 1;
@@ -106,5 +107,13 @@ public class PlayerScript : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawCube(transform.position - Vector3.up * castDistance, boxSize);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("BouncePad")
+            && collision.GetContact(0).normal == Vector2.up)
+        {
+            rigBody.linearVelocityY = jumpForce * jumpPadMultiplier;
+        }
     }
 }
