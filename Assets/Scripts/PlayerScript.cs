@@ -38,26 +38,26 @@ public class PlayerScript : MonoBehaviour
     {
         float movement = Input.GetAxis("Player " + playerNumber + " Horizontal");
 
-        transform.Translate(Vector3.right * Time.deltaTime * Mathf.Abs(movement) * speed,Space.Self);
+        //transform.Translate(Vector3.right * Time.deltaTime * Mathf.Abs(movement) * speed,Space.Self);
 
-        //// Bewegung
-        //if (0 < movement && rigBody.linearVelocityX <= speed * movement || 
-        //    0 > movement && rigBody.linearVelocityX >= speed * movement)
-        //{ 
-        //    rigBody.linearVelocityX = speed * movement;
-        //}
+        // Bewegung
+        if (0 < movement && rigBody.linearVelocityX <= speed * movement ||
+            0 > movement && rigBody.linearVelocityX >= speed * movement)
+        {
+            rigBody.linearVelocityX = speed * movement;
+        }
 
-        //if (isGrounded())
-        //{
-        //    if (rigBody.linearVelocityX >= 1.1f * speed || rigBody.linearVelocityX <= -1.1f * speed)
-        //    {
-        //        rigBody.linearVelocityY = jumpForce;
-        //    }
-        //    else if(movement == 0)
-        //    { 
-        //        rigBody.linearVelocityX = (1 - ground_friction) * rigBody.linearVelocityX;
-        //    }
-        //}
+        if (isGrounded())
+        {
+            if (rigBody.linearVelocityX >= 1.1f * speed || rigBody.linearVelocityX <= -1.1f * speed)
+            {
+                rigBody.linearVelocityY = jumpForce;
+            }
+            else if (movement == 0)
+            {
+                rigBody.linearVelocityX = (1 - ground_friction) * rigBody.linearVelocityX;
+            }
+        }
 
 
         if (rigBody.linearVelocityY < -5)
